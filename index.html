@@ -71,13 +71,26 @@ footer { text-align:center; color:var(--muted); padding:36px 0 50px; font-size:.
 }
 </style>
 </head>
-<body>
 
+
+<script>
+    async function loadSection(id, file) {
+        const response = await fetch(file);
+        document.getElementById(id).innerHTML = await response.text();
+    }
+
+    loadSection("publications", "publications.html");
+    loadSection("presentations", "presentations.html");
+</script>
+
+
+
+<body>
 <header>
   <div class="container hero">
     <div>
-      <h1>Hiroki Tanaka</h1>
-      <h2>田中　裕樹</h2>
+      <h1>Hiroki Tanaka, Ph.D.</h1>
+      <h2>田中　裕樹 (博士（工学）)</h2>
       <p class="tagline">Research on crystal growth, optical and laser materials, solid-state lasers, laser cooling of solids, and nonlinear optics.</p>
       <div class="affil">Leibniz-Institut für Kristallzüchtung (IKZ), Berlin, Germany</div><a href="https://ikz-berlin.de" target="_blank">Institute Web page</a>
       <p class="meta">Department Volume Crystals · Section Oxides &amp; Fluorides</p>
@@ -103,264 +116,27 @@ footer { text-align:center; color:var(--muted); padding:36px 0 50px; font-size:.
 </nav>
 
 <main class="container">
-  <section class="card" id="about">
-    <h2>About</h2>
-    <p class="intro">
-      I am a researcher working on crystal growth and optics and laser physics/engineering,
-      currently particularly focusing on high-purity fluoride single crystals for efficient solid-state lasers, solid-state laser cooling, and vacuum UV nonlinear optics.
-    </p>
-  </section>
-
-  <section class="card" id="research">
-    <h2>Research</h2>
-    <div class="research-grid">
-      <div class="topic"><strong>Fluoride crystals</strong>Preparation of high-purity fluoride compounds and growth and characterization of high-quality fluoride single crystals (Czochralski, Bridgman method).</div>
-      <div class="topic"><strong>Solid-state laser cooling</strong>Efficient cooling of high-purity rare-earth-dopef fluoride crystals by anti-Stokes fluorescence.</div>
-      <div class="topic"><strong>Solid-state lasers</strong>Development of solid-state lasers based on novel transitions of rare-earth ions, in the UV, visible, and near-infrared spectra ranges.</div>
-      <div class="topic"><strong>Nonlinear optics</strong>Nonlinear optical crystals enabling frequency conversion to vacuum UV spectral range, where conventional oxide nonlinear crystals cannot reach.</div>
-    </div>
-  </section>
-
-  <section id="publications">
-<h2>Journal articles</h2>
-<ol reversed="">
-<small>
-<li><a href="http://dx.doi.org/10.1007/s00340-026-08703-3" target="_blank">
-                            Moritz Badtke, Sascha Kalusniak, Ole Hahn, Hiroki Tanaka, and Christian Kränkel,
-                            "Green Tb<sup>3+</sup>:ZBLAN fiber laser," Applied Physics B 132,
-                            92 (2026).
-                        </a></li>
-<li><a href="http://dx.doi.org/10.1364/JOSAB.604762" target="_blank">
-                            Luca Koldeweyh, Stefan Püschel, Zoe Liestmann, and Hiroki Tanaka,
-                            "Solid-state laser cooling of Yb<sup>3+</sup>-doped KY<sub>3</sub>F<sub>10</sub> to 145 K," Journal of Optical Society of America B 43(8),
-                            1719-1725 (2026).
-                        </a></li>
-<li><a href="https://doi.org/10.1103/d7pk-hsry" target="_blank">
-                            Peng Ju, Kunhong Shen, Stefan Püschel, Yuanbin Jin, Hiroki Tanaka, and Tongcang Li,
-                            "Purcell-enhanced optical refrigeration," Physical Review Research 8, 023149 (2026).
-                        </a></li>
-<li><a href="http://dx.doi.org/10.1038/s43586-026-00499-y" target="_blank">
-                            Yang Ding, Shenghao Zhang, Alexander R. Albrecht, Zhaojie Feng, Lars Forberger, Hiroki Tanaka,
-                            Markus P. Hehlen, Galina Nemova, Peter J. Pauzauskie, Denis V. Seletskiy, and Masaru Kuno,
-                            "Solid-state laser cooling," Nature Reviews Methods Primers 6,
-                            46 (2026).
-                        </a></li>          
-<li><a href="https://doi.org/10.1364/ome.590031" target="_blank">
-                            Moritz Badtke, Hiroki Tanaka, Zoe Liestmann, Christian Kränkel, and Sascha Kalusniak,
-                            "UV-pumped Tm:YLF lasers at 450 nm, 742 nm, and 1.9 μm," Optical Materials Express 16(4),
-                            1040-1053 (2026).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/ome.590031" target="_blank">
-                            Moritz Badtke, Sascha Kalusniak, Stefan Püschel, Hiroki Tanaka, and Christian Kränkel,
-                            "Temperature-dependent spectroscopy and laser performance of yellow Tb:YLF laser with
-                            36% slope efficiency at room temperature and 61% at 100 K," Laser & Photonics Reviews 19(16),
-                            2402019 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1063/5.0274891" target="_blank">
-                            Alexander Mrokon, Heike Kraft, Dongsung Shin, Hiroki Tanaka, Simon J. Herr, Karsten Buse,
-                            and Ingo Breunig, "Electrically-induced resonance shifts of whispering gallery resonators
-                            made of barium magnesium fluoride," APL Photonics 10, 096109 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/ol.563752" target="_blank">
-                            Moritz Badtke, Hiroki Tanaka, Stefan Püschel, Christian Kränkel, and Sascha Kalusniak,
-                            "Efficient room temperature continuous wave laser operation of Tm:YLF around 820 nm," Optics
-                            Letters 50(12), 3994-3997 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OL.559429" target="_blank">
-                            Moritz Badtke, Sascha Kalusniak, Hiroki Tanaka, and Christian Kränkel, "Tb:YLF laser at
-                            412.7 nm and 435.1 nm," Optics Letters 50(10), 3421-3424 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1016/j.jlumin.2025.121061" target="_blank">
-                            Moritz Badtke, Sascha Kalusniak, Stefan Püschel, Hiroki Tanaka, and Christian Kränkel,
-                            "Prospects of UV and blue laser emission from the <sup>5</sup>D<sub>3</sub> level in
-                            Tb<sup>3+</sup>:LiYF<sub>4</sub>," Journal of Luminescence 280, 121061 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.3390/app15094956" target="_blank">
-                            Omer Altaher, Kore Hasse, Sergiy Suntsov, Hiroki Tanaka, Christian Kränkel, Istvan Bányász,
-                            Romana Mikšová, and Detlef Kip,
-                            "Ion-implanted diamond blade diced ridge waveguides in Pr:YLF—optical characterization and
-                            small-signal gain measurement," Applied Sciences 15(9), 4956 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/ol.563751" target="blank">
-                            Moritz Badtke, Sascha Kalusniak, Stefan Püschel, Hiroki Tanaka, and Christian Kränkel,
-                            "Temperature‐dependent spectroscopy and laser performance of yellow Tb:YLF lasers with 36%
-                            slope efficiency at room temperature and 61% at 100 K," Laser Photonics Review 19(16),
-                            2402019 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.559428" target="blank">
-                            Moritz Badtke, Stefan Püschel, Zoe Liestmann, Hiroki Tanaka, Christian Kränkel, and Sascha
-                            Kalusniak, "Highly efficient continuous-wave Tm3+:YLF cascade laser operating at
-                            telecommunication wavelengths," Optics Express 33(6), 14340-14349 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.550678" target="blank">
-                            Wentao Hou, Sascha Kalusniak, Stefan Püschel, Hiroki Tanaka, Jun Xu, Jun Tang, and Christian
-                            Kränkel, "Spectroscopy and efficient OPSL-pumped laser operation of Er:BaF<sub>2</sub>
-                            crystal at 2.8 µm," Optics Express 33(4), 6799-6807 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.554022" target="blank">
-                            Yushi Kaneda, Hiroki Tanaka, and Valery Temyanko, "Diode-pumped Sm:YLF laser at 605 nm and
-                            648 nm," Optics Express 33(4), 8903-8910 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.549208" target="blank">
-                            Leonid Kotov, Yushi Kaneda, Stefan Püschel, Hiroki Tanaka, Johnathan Hair, Amin Nehrir, and
-                            Valery Temyanko, "Continuous-wave and Q-switched Tb:YLF lasers at 587 nm," Optics Express
-                            33(3), 3950-3956 (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.543155" target="blank">
-                            Fumihiko Kannari, Tomohiro Ishikawa, Hiroki Tanaka, Yuta Shioya, and Ryo Yasuhara, "544-nm
-                            Tb<sup>3+</sup>-doped LiYF<sub>4</sub> laser pumped by 488-nm InGaN laser diodes and high
-                            peak power operation with cavity-dumped <i>Q</i>-switching," Applied Optics 64(1), 83-90
-                            (2025).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.540714" target="_blank">
-                            Sascha Kalusniak, Moritz Badtke, Stafan Püschel, Ole Hahn, Hiroki Tanaka, and Christian
-                            Kränkel, "Efficient cryogenic orange Pr<sup>3+</sup>:YLF lasers," Optics Express 32(22),
-                            40020-40029 (2024).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.538215" target="_blank">
-                            Stafan Püschel, Zoe Liestmann, Sascha Kalusniak, Christian Kränkel, Andreas Schulz, Heike
-                            Traub, and Hiroki Tanaka, "Impact of Ho<sup>3+</sup>, Er<sup>3+</sup>, and Tm<sup>3+</sup>
-                            on laser cooling of Yb:YLF," Optical Materials Express 14(10), 2334-2348 (2024).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.513925" target="_blank">
-                            Sascha Kalusniak, Anastasia Uvarova, Ines Arlt, Lena Hülshoff, Patty Eckhof, Philipp
-                            Wegener, Mario Brützam, Steffen Ganschow, Christo Guguschev, Hiroki Tanaka, and Christian
-                            Kränkel, "Growth, characterization, and efficient laser operation of Czochralski- and
-                            micro-pulling-down-grown Yb<sup>3+</sup>:YScO<sub>3</sub> mixed sesquioxides," Optical
-                            Materials Express 14(2), 304-318 (2024).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.503250" target="_blank">
-                            Hiroki Tanaka and Stefan Püschel, "Monte Carlo fluorescence ray tracing simulation for laser
-                            cooling of solids," Optics Express 32(2), 2306-2320 (2024).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.492170" target="_blank">
-                            Simon Herr, Hiroki Tanaka, Ingo Breunig, Matthias Bickermann, and Frank Kühnemann, "Fanout
-                            periodic poling of BaMgF<sub>4</sub> crystals," Optical Materials Express 13(8), 2158-2164
-                            (2023).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OL.494164" target="_blank">
-                            Moritz Badtke, Sascha Kalusniak, Hiroki Tanaka, and Christian Kränkel,
-                            "UV-laser-diode-pumped visible Tb<sup>3+</sup>:LiLuF<sub>4</sub> lasers," Optics Letters
-                            48(13), 3379-3382 (2023).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.486842" target="_blank">
-                            Serdar Okuyucu, Jelto Thesinga, Hiroki Tanaka, Yusuf Ozturk, Franz Kaertner, Mikhail
-                            Pergament, and Umit Demirbas, "Temperature dependence of emission cross-section and
-                            fluorescence lifetime in Cr:LiCAF, Cr:LiSAF, and Cr:LiSGaF between 78 K and 618 K," Optical
-                            Materials Express 13(5), 1211-1227 (2023).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.472633" target="_blank">
-                            Stefan Püschel, Christian Kränkel, and Hiroki Tanaka, "Laser cooling in
-                            Yb:KY<sub>3</sub>F<sub>10</sub>: a comparison with Yb:YLF," Optics Express 30(26),
-                            47235-47248 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.475711" target="_blank">
-                            Anna Suzuki, Sascha Kalusniak, Hiroki Tanaka, Mario Brützam, Steffen Ganschow, Masaki
-                            Tokurakawa, and Christian Kränkel, "Spectroscopy and 2.1 µm laser operation of
-                            Czochralski-grown Tm<sup>3+</sup>:YScO<sub>3</sub> crystals," Optics Express 30(23),
-                            42762-42771 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1016/j.pquantelec.2022.100411" target="_blank">
-                            Hiroki Tanaka, Sascha Kalusniak, Moritz Badtke, Maxim Demesh, Nikolay Kuleshov, Fumihiko
-                            Kannari, and Christian Kränkel, "Visible solid-state lasers based on Pr<sup>3+</sup> and
-                            Tb<sup>3+</sup>," Progress in Quantum Electronics 84, 100411 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.35848/1882-0786/ac8414" target="_blank">
-                            Moritz Badtke, Hiroki Tanaka, Sascha Kalusniak, Maxim Demesh, Nikolay Kuleshov, and
-                            Christian Kränkel, "Few-ns, kW peak power <i>Q</i>-switched pulses from orange and red
-                            Pr:YLF lasers," Applied Physics Express 15(8), 082006 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OL.449115" target="_blank">
-                            Stefan Püschel, Felix Mauerhoff, Christian Kränkel, and Hiroki Tanaka,, "Solid-state laser
-                            cooling in Yb:CaF<sub>2</sub> and Yb:SrF<sub>2</sub> by anti-Stokes fluorescence," Optics
-                            Letters 47(2), 333-336 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.450203" target="_blank">
-                            Christian Kränkel, Anastasia Uvarova, Christo Guguschev, Sascha Kalusniak, Lena Hülshoff,
-                            Hiroki Tanaka, and Detlef Klimm, "Rare-earth doped mixed sesquioxides for ultrafast lasers
-                            [Invited]," Optical Materials Express 12(3), 1074-1091 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1007/s00340-022-07759-1" target="_blank">
-                            Sascha Kalusniak, Castellano-Hernández, Hasan Yalçinoğlu, Hiroki Tanaka, and Christian
-                            Kränkel, "Spectroscopic properties of Tb<sup>3+</sup> as an ion for visible lasers," Applied
-                            Physics B 128(2), 33 (2022).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.422535" target="_blank">
-                            Stefan Püschel, Sascha Kalusniak, Christian Kränkel, and Hiroki Tanaka,
-                            "Temperature-dependent radiative lifetime of Yb:YLF: refined cross sections and potential
-                            for laser cooling," Optics Express 29(7), 11106-11120 (2021).
-                        </a></li>
-<li><a href="https://doi.org/10.1007/s00340-021-07629-2" target="_blank">
-                            Moritz Badtke, Hiroki Tanaka, Lenn J. Ollenburg, Sascha Kalusniak, Christian Kränkel,
-                            "Passively Q-switched 8.5-ns Pr<sup>3+</sup>:YLF laser at 640 nm," Applied Physics B 127(6),
-                            83 (2021).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OL.411072" target="_blank">
-                            Sascha Kalusniak, Hiroki Tanaka, Elena Castellano-Hernández, and Christian Kränkel,
-                            "UV-pumped visible Tb<sup>3+</sup>-lasers," Optics Letters 45(22), 6170-6173 (2020).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.394792" target="_blank">
-                            Shogo Fujita, Hiroki Tanaka, and Fumihiko Kannari, "Output characteristics of
-                            Pr:YAlO<sub>3</sub> and Pr:YAG lasers pumped by high-power GaN laser diodes," Applied Optics
-                            59(17), 5124-5130 (2020).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OME.395893" target="_blank">
-                            Hiroki Tanaka, Christian Kränkel, and Fumihiko Kannari, "Transition-metal-doped saturable
-                            absorbers for passive <i>Q</i>-switching of visible lasers," Optical Materials Express
-                            10(8), 1827-1842 (2020).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.27.038134" target="_blank">
-                            Shogo Fujita, Hiroki Tanaka, and Fumihiko Kannari, "Intracavity second-harmonic pulse
-                            generation at 261 and 320 nm with a Pr<sup>3+</sup>:YLF laser <i>Q</i>-switched by a
-                            Co<sup>2+</sup>:MgAl<sub>2</sub>O<sub>4</sub> spinel saturable absorber," Optics Express
-                            27(26), 38134-38146 (2019).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OL.44.003370" target="_blank">
-                            Naoto Sugiyama, Shogo Fujita, Yusaku Hara, Hiroki Tanaka, and Fumihiko Kannari,
-                            "Diode-pumped 640 nm Pr:YLF regenerative laser pulse amplifier," Optics Letters 44(13),
-                            3370-3373 (2019).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.57.005923" target="_blank">
-                            Hiroki Tanaka, Shogo Fujita, and Fumihiko Kannari, "High-power visibly emitting
-                            Pr<sup>3+</sup> laser end pumped by single-emitter or fiber-coupled GaN blue laser diodes,"
-                            Applied Optics 57(21), 5923-5928 (2018).
-                        </a></li>
-<li><a href="https://doi.org/10.7567/JJAP.57.052701" target="_blank">
-                            Naoto Sugiyama, Hiroki Tanaka, and Fumihiko Kannari, "Mode-locked Ti:sapphire laser
-                            oscillators pumped by wavelength-multiplexed laser diodes," Japanese Journal of Applied
-                            Physics 57(5), 052701 (2018).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.56.001654" target="_blank">
-                            Ryota Sawada, Hiroki Tanaka, Naoto Sugiyama, and Fumihiko Kannari, "Wavelength-multiplexed
-                            pumping with 478- and 520-nm indium gallium nitride laser diodes for Ti:sapphire laser,"
-                            Applied Optics 56(6), 1654-1661 (2017).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.55.007782" target="_blank">
-                            Kodai Iijima, Ryosuke Kariyama, Hiroki Tanaka, and Fumihiko Kannari, "Pr<sup>3+</sup>:YLF
-                            mode-locked laser at 640 nm directly pumped by InGaN-diode lasers," Applied Optics 55(28),
-                            7782-7787 (2016).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.55.006193" target="_blank">
-                            Hiroki Tanaka, Ryosuke Kariyama, Kodai Iijima, and Fumihiko Kannari, "50-kHz, 50-ns UV pulse
-                            generation by diode-pumped frequency doubling Pr<sup>3+</sup>:YLF <i>Q</i>-switch laser with
-                            a Cr<sup>4+</sup>:YAG saturable absorber," Applied Optics 55(23), 6193-6198 (2016).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/OE.23.019382" target="_blank">
-                            Hiroki Tanaka, Ryosuke Kariyama, Kodai Iijima, Kenichi Hirosawa, and Fumihiko Kannari,
-                            "Saturation of 640-nm absorption in Cr<sup>4+</sup>:YAG for an InGaN laser diode pumped
-                            passively <i>Q</i>-switched Pr<sup>3+</sup>:YLF laser," Optics Express 23(15), 19382-19395
-                            (2015).
-                        </a></li>
-<li><a href="https://doi.org/10.1364/AO.53.002030" target="_blank">
-                            Junichiro Kojou, Ryo Abe, Ryosuke Kariyama, Hiroki Tanaka, Akira Sakurai, Yojiro Watanabe,
-                            and Fumihiko Kannari, "InGaN diode pumped actively <i>Q</i>-switched intracavity frequency
-                            doubling Pr:LiYF<sub>4</sub> 261 nm laser," Applied Optics 53(10), 2030-2036 (2014).
-                        </a></li>
-</small>
-</ol>
+<section class="card" id="about">
+<h2>About</h2>
+<p class="intro">
+    I am a researcher working on crystal growth and optics and laser physics/engineering,
+    currently particularly focusing on high-purity fluoride single crystals for efficient solid-state lasers, solid-state laser cooling, and vacuum UV nonlinear optics.
+</p>
 </section>
 
-  <section id="presentations">
+<section class="card" id="research">
+<h2>Research</h2>
+<div class="research-grid">
+    <div class="topic"><strong>Fluoride crystals</strong>Preparation of high-purity fluoride compounds and growth and characterization of high-quality fluoride single crystals (Czochralski, Bridgman method).</div>
+    <div class="topic"><strong>Solid-state laser cooling</strong>Efficient cooling of high-purity rare-earth-dopef fluoride crystals by anti-Stokes fluorescence.</div>
+    <div class="topic"><strong>Solid-state lasers</strong>Development of solid-state lasers based on novel transitions of rare-earth ions, in the UV, visible, and near-infrared spectra ranges.</div>
+    <div class="topic"><strong>Nonlinear optics</strong>Nonlinear optical crystals enabling frequency conversion to vacuum UV spectral range, where conventional oxide nonlinear crystals cannot reach.</div>
+</div>
+</section>
+
+<section id="publications"></section>
+
+<section id="presentations">
 <h2>Presentations</h2>
 <section>
 <h3>International conferences</h3>
